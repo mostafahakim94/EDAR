@@ -1,0 +1,45 @@
+@import '../../app.scss';
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+    .links {
+      display: flex;
+      align-items: center;
+      background-color: rgba($color: $darkcolor, $alpha: 0.2);
+      box-shadow: 5px 5px 10px 1px rgba($color: $darkcolor, $alpha: 0.1);
+      border-radius: 2rem;
+      padding: 1rem 0.5rem;
+      a {
+        transition: 0.4s color;
+        padding: 0 1rem;
+        &:hover {
+          color: $maincolor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .navbar {
+    .container {
+      display: block;
+      text-align: center;
+      .links {
+        justify-content: center;
+        text-align: center;
+        padding: 1rem 0;
+        a {
+          padding: 0 0.5rem;
+        }
+      }
+    }
+  }
+}

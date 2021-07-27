@@ -1,0 +1,121 @@
+//-------------------------vars------------------
+$phone: 700px;
+$font: 'Noto Sans KR', sans-serif;
+$font2: 'Allerta Stencil', sans-serif;
+$maincolor: #e69500;
+$seccolor: #474747;
+$darkcolor: black;
+$lightcolor: white;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  color: $lightcolor;
+}
+
+a {
+  text-decoration: none;
+  color: $lightcolor;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 75%;
+  margin: auto;
+  @media (max-width: $phone) {
+    max-width: 95%;
+  }
+}
+.cpadding {
+  padding-top: 6rem;
+}
+
+.bigtitle {
+  font-size: 6rem;
+  color: $maincolor;
+  @media (max-width: $phone) {
+    font-size: 4.5rem;
+  }
+}
+.sectitle {
+  font-size: 4.5rem;
+  color: $maincolor;
+  span {
+    color: $darkcolor;
+  }
+  @media (max-width: $phone) {
+    font-size: 3.5rem;
+  }
+  @media (max-width: 320px) {
+    font-size: 2rem;
+  }
+}
+.font2 {
+  font-family: $font2;
+}
+.dark {
+  color: $darkcolor;
+}
+.bigtext {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  @media (max-width: $phone) {
+    font-size: 2rem;
+  }
+}
+.btn {
+  font-family: $font;
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
+  background-color: $maincolor;
+  border: 1px solid white;
+  border-radius: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+  &:hover {
+    color: $maincolor;
+    background-color: $lightcolor;
+  }
+  &:active {
+    box-shadow: 3px 3px 5px 1px rgba($color: $lightcolor, $alpha: 0.3);
+  }
+  @media (max-width: $phone) {
+    display: block;
+  }
+}
+.cleanin {
+  display: block;
+  width: 100%;
+  color: $darkcolor;
+  font-family: $font;
+  text-align: center;
+  border: 1px solid $lightcolor;
+  border-radius: 2rem;
+  outline: none;
+  padding: 0.7rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  &:focus {
+    border: 3px solid $lightcolor;
+  }
+  &::placeholder {
+    color: $seccolor;
+    font-family: $font;
+    font-size: 1rem;
+  }
+}
+.alertbox {
+  background-color: $seccolor;
+  padding: 1rem 0.5rem;
+  margin-bottom: 1rem;
+}

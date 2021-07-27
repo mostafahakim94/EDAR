@@ -1,0 +1,27 @@
+@import '../../App.scss';
+
+.logo {
+  position: relative;
+  img {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 10rem;
+    height: 4rem;
+    margin: auto;
+  }
+  .rt {
+    top: 0;
+    left: 0;
+    animation: rt 3s ease-out infinite alternate;
+  }
+  @media (max-width: $phone) {
+    display: none;
+  }
+}
+@keyframes rt {
+  to {
+    transform: rotateY(40deg);
+  }
+}

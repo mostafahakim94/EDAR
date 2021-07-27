@@ -1,0 +1,94 @@
+@import '../../App.scss';
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  border-radius: 10px;
+  opacity: 0.8;
+  width: 90%;
+  height: 30rem;
+  padding: 0rem;
+  margin: 1rem auto;
+  .btn {
+    &:hover {
+      background: none;
+    }
+    &:active {
+      box-shadow: none;
+    }
+  }
+  .slide {
+    height: 100%;
+    border: none;
+    background: none;
+    border-radius: 0;
+    margin: 0;
+    &:nth-child(1) {
+      left: 0;
+      padding-left: 0.5rem;
+    }
+    &:nth-child(3) {
+      right: 0;
+      padding-right: 0.5rem;
+    }
+  }
+  .content {
+    text-align: center;
+    padding: 0.5rem 2rem;
+    .startnow {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    i {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      background-color: $maincolor;
+    }
+    p {
+      opacity: 0;
+      animation: appear 0.6s ease-in forwards;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: fit-content;
+    .content {
+      padding: 3rem 0;
+      i {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+  @media (max-width: $phone) {
+    .content {
+      .startnow {
+        top: -1rem;
+        left: 0;
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    .content {
+      i {
+        width: 6rem;
+        height: 6rem;
+      }
+      height: fit-content;
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}

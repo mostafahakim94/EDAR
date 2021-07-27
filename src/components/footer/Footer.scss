@@ -1,0 +1,14 @@
+@import '../../app.scss';
+
+.footer {
+  position: block;
+  width: 100%;
+  background-color: rgba($color: $seccolor, $alpha: 1);
+  padding: 1rem 0;
+  .container {
+    p {
+      text-align: right;
+      color: $lightcolor;
+    }
+  }
+}

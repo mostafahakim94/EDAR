@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+.scrollarrow {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $lightcolor;
+  margin: 2rem auto;
+  p {
+    padding: 0.5rem;
+  }
+}
