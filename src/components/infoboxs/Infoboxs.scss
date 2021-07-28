@@ -13,6 +13,9 @@
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
     margin-right: 1rem;
     // transition: all 0.5s ease-in-out;
+    &:nth-child(1) {
+      margin-left: 1rem;
+    }
     i {
       color: $lightcolor;
       background-color: $maincolor;

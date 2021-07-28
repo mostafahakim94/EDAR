@@ -68,7 +68,7 @@ function Home() {
       </div>
 
       <div className='services'>
-        <div className='container cpadding'>
+        <div className='container'>
           <h1 className='sectitle'>
             Our <span>Services</span>
           </h1>

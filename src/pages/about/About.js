@@ -90,7 +90,7 @@ function About() {
         trigger: '.sec3',
         pin: true,
         start: 'top top',
-        scrub: 1,
+        scrub: 2,
         snap: {
           snapTo: 1 / (panels.length - 1),
           duration: { min: 0.1, max: 0.1 },

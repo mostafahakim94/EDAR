@@ -9,9 +9,9 @@
   border-radius: 10px;
   opacity: 0.8;
   width: 90%;
-  height: 30rem;
   padding: 0rem;
-  margin: 1rem auto;
+  margin: 0rem auto;
+  margin-bottom: 2rem;
   .btn {
     &:hover {
       background: none;
@@ -21,17 +21,20 @@
     }
   }
   .slide {
-    height: 100%;
+    display: inline-block;
     border: none;
     background: none;
     border-radius: 0;
+    height: max-content;
     margin: 0;
     &:nth-child(1) {
       left: 0;
+      padding: 2rem 1rem;
       padding-left: 0.5rem;
     }
     &:nth-child(3) {
       right: 0;
+      padding: 2rem 1rem;
       padding-right: 0.5rem;
     }
   }
@@ -68,6 +71,7 @@
   }
   @media (max-width: $phone) {
     .content {
+      padding: 4rem 0;
       .startnow {
         top: -1rem;
         left: 0;
@@ -77,12 +81,11 @@
   @media (max-width: 320px) {
     .content {
       i {
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
       }
-      height: fit-content;
       p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
     }
   }

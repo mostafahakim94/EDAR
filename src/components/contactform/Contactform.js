@@ -20,6 +20,13 @@ function Contactform() {
   const [alert, setalert] = useState(false);
 
   const { name, email, phone, subject, message } = contactform;
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
   const onSubmit = (e) => {
     e.preventDefault();
     if (
@@ -31,6 +38,16 @@ function Contactform() {
     ) {
       setalert(true);
       setTimeout(() => setalert(false), 2000);
+    } else {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ contact: 'contact', contactform }),
+      })
+        .then(() => alert('Success!'))
+        .catch((error) => alert(error));
+
+      e.preventDefault();
     }
   };
   const onChange = (e) => {
@@ -39,7 +56,12 @@ function Contactform() {
 
   return (
     <div className='form'>
-      <form action='POST' data-netlify='true' onSubmit={onSubmit}>
+      <form
+        name='contact'
+        action='POST'
+        data-netlify='true'
+        onSubmit={onSubmit}
+      >
         <h2 className='sectitle'>
           {/* <i className='far fa-address-card'></i> */}
           Contact <span>Form</span>
