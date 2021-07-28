@@ -14,21 +14,18 @@ function Contactform() {
 
   return (
     <div className='form'>
-      <form
-        name='contact v1'
-        method='post'
-        data-netlify='true'
-        data-netlify-honeypot='bot-field'
-        onSubmit='submit'
-      >
-        <input type='hidden' name='form' value='contact v1' />
-        <div hidden>
-          <input name='bot-field' />
-        </div>
-        <h2 className='sectitle'>
-          Contact <span>Form</span>
-        </h2>
-        {/* {alert && <p className='alertbox'>Please fill down all fields below</p>}{' '} */}
+      <h2 className='sectitle'>
+        Contact <span>Form</span>
+      </h2>
+      <form name='contact' netlify netlify-honeypot='bot-field' hidden>
+        <input type='text' name='name' />
+        <input type='email' name='email' />
+        <input type='number' name='phone' />
+        <input type='text' name='subject' />
+        <textarea name='message'></textarea>
+      </form>
+      <form method='post'>
+        <input type='hidden' name='form-name' value='contact' />
         <input type='text' className='cleanin' name='name' placeholder='Name' />
         <input
           type='email'
