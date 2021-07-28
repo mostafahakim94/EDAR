@@ -1,0 +1,46 @@
+@import '../../App.scss';
+
+.infoboxs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $darkcolor;
+  .box {
+    overflow: hidden;
+    text-align: center;
+    background-color: $lightcolor;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    // padding: 1rem;
+    margin-right: 1rem;
+    // transition: all 0.5s ease-in-out;
+    i {
+      color: $lightcolor;
+      background-color: $maincolor;
+      // width: 8rem;
+      padding: 2rem;
+      border-radius: 50%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: justify;
+      font-size: 1.1rem;
+      border-top: 1px solid $seccolor;
+      padding: 1rem;
+    }
+    // &:hover {
+    //   transform: translateY(-2rem) scale(1);
+    // }
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    .box {
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}

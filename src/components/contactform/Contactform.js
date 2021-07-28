@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import './Contactform.scss';
 
-function Contactform({ onSubmit }) {
+function Contactform() {
   let tl = gsap.timeline();
-  let alertbox = useRef(null);
   useEffect(() => {
     tl.from('.sectitle', { opacity: 0, y: 50, duration: 1 }, 0.5);
     tl.from('.cleanin', { opacity: 0, y: 50, duration: 1 }, 0.5);
@@ -21,17 +20,15 @@ function Contactform({ onSubmit }) {
   const [alert, setalert] = useState(false);
 
   const { name, email, phone, subject, message } = contactform;
-  const onSub = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     if (
-      name !== '' &&
-      email !== '' &&
-      phone !== '' &&
-      subject !== '' &&
-      message !== ''
+      name === '' &&
+      email === '' &&
+      phone === '' &&
+      subject === '' &&
+      message === ''
     ) {
-      onSubmit();
-    } else {
       setalert(true);
       setTimeout(() => setalert(false), 2000);
     }
@@ -42,16 +39,12 @@ function Contactform({ onSubmit }) {
 
   return (
     <div className='form'>
-      <form onSubmit={onSub}>
+      <form action='POST' data-netlify='true' onSubmit={onSubmit}>
         <h2 className='sectitle'>
           {/* <i className='far fa-address-card'></i> */}
           Contact <span>Form</span>
         </h2>
-        {alert && (
-          <p ref={(el) => (alertbox = el)} className='alertbox'>
-            Please fill down all fields below
-          </p>
-        )}{' '}
+        {alert && <p className='alertbox'>Please fill down all fields below</p>}{' '}
         <input
           type='text'
           className='cleanin'
@@ -91,6 +84,7 @@ function Contactform({ onSubmit }) {
           onChange={onChange}
           placeholder='Message'
         ></textarea>
+        <div data-netlify-recapcha='true'></div>
         <button type='submit' className='btn'>
           <i className='fas fa-paper-plane'></i> Send
         </button>

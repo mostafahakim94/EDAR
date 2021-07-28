@@ -36,6 +36,7 @@ function Home() {
       .from(text, { y: 50, opacity: 0, duration: 1 }, 1.5)
       .from(btn1, { opacity: 0, duration: 1.5 }, 2)
       .from(btn2, { opacity: 0, duration: 1.5, delay: 0.3 }, 2);
+    // eslint-disable-next-line
   }, []);
   return (
     <div

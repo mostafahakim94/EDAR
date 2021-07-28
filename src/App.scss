@@ -71,6 +71,13 @@ ul {
     font-size: 2rem;
   }
 }
+.ntext {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  @media (max-width: $phone) {
+    font-size: 1.5rem;
+  }
+}
 .btn {
   font-family: $font;
   font-size: 1.1rem;

@@ -47,12 +47,19 @@
       text-align: center;
       padding: 2rem 0;
     }
+    @media (max-width: 1024px) {
+      text-align: center;
+      padding: 2rem 0;
+      .bigtext {
+        font-size: 2rem;
+      }
+    }
   }
 
   .services {
     scroll-snap-align: start;
     position: relative;
-    // display: flex;
+    display: flex;
     // flex-direction: column;
     // justify-content: space-around;
     height: 100vh;
@@ -71,6 +78,16 @@
       text-align: center;
       backdrop-filter: blur(2px);
       padding: 2rem 0;
+    }
+    @media (max-width: 1024px) {
+      text-align: center;
+      padding: 0;
+      .sectitle {
+        font-size: 3rem;
+      }
+      .bigtext {
+        font-size: 2rem;
+      }
     }
   }
 }
