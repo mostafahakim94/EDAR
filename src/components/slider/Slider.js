@@ -42,7 +42,7 @@ function Slider() {
       {list.map(
         (item, indx) =>
           pageno === indx + 1 && (
-            <div key={indx} className='content' onTouchEnd={nexpage}>
+            <div key={indx} className='content'>
               <Link className='btn startnow' to='/contact'>
                 Start Now
               </Link>
