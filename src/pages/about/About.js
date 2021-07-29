@@ -112,7 +112,7 @@ function About() {
               throughout all of the United Arab Emirates.
             </li>
             <li className='ntext tx2'>
-              We are proud to say that since EDAR establishment in 2021, we have
+              We are proud to say that since EDAR establishment in 2018, we have
               successfully Completed various construction projects and developed
               a reputation as a trustworthy, Competent contractor.
             </li>
