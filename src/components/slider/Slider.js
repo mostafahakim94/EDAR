@@ -6,7 +6,7 @@ function Slider() {
   const list = [
     {
       icon: 'fas fa-building fa-5x',
-      text: 'All kinds of building projects contracting (First Grade)',
+      text: 'Various types of contracting for building projects ',
     },
     {
       icon: 'fas fa-file-signature fa-5x',
@@ -14,7 +14,7 @@ function Slider() {
     },
     {
       icon: 'fas fa-road fa-5x',
-      text: 'Main roads, streets, and related works contracting',
+      text: 'Contracting for main roads, streets and related projects ',
     },
     {
       icon: 'fas fa-industry fa-5x',
