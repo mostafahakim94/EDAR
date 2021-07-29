@@ -19,14 +19,12 @@ function Contactform() {
       </h2>
       <form
         name='contact'
-        method='POST'
+        method='post'
         action='/contact-thanks'
         data-netlify-honeypot='bot-field'
         data-netlify='true'
       >
-        <input type='hidden' name='bot-field' />
         <input type='hidden' name='form-name' value='contact' />
-
         <input type='text' className='cleanin' name='name' placeholder='Name' />
         <input
           type='email'
