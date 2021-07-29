@@ -17,15 +17,16 @@ function Contactform() {
       <h2 className='sectitle'>
         Contact <span>Form</span>
       </h2>
-      <form name='contact' netlify netlify-honeypot='bot-field' hidden>
-        <input type='text' name='name' />
-        <input type='email' name='email' />
-        <input type='number' name='phone' />
-        <input type='text' name='subject' />
-        <textarea name='message'></textarea>
-      </form>
-      <form method='post'>
+      <form
+        name='contact'
+        method='POST'
+        action='/contact-thanks'
+        data-netlify-honeypot='bot-field'
+        data-netlify='true'
+      >
+        <input type='hidden' name='bot-field' />
         <input type='hidden' name='form-name' value='contact' />
+
         <input type='text' className='cleanin' name='name' placeholder='Name' />
         <input
           type='email'
